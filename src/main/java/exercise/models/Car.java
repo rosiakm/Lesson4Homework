@@ -12,7 +12,6 @@ public class Car {
     private Market market;
     private String segment;
     private Dimension dimension;
-    private static Random random;
 
     public Car(Producer producer, boolean isAutomaticGear, Market market, String segment, Dimension dimension){
         this.producer = producer;
@@ -23,7 +22,6 @@ public class Car {
     }
 
     public static void main(String[] args) {
-        random = new Random();
         //new countries
         Country poland = new Country("Poland",'P');
         Country germany = new Country("Germany", 'D');
