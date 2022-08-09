@@ -28,7 +28,6 @@ public class Car {
         Country france = new Country("France", 'F');
         Country unitedStates = new Country("United States", 'U');
         Country japan = new Country("Japan", 'J');
-        List<Country> allCountries = new ArrayList<>(asList(poland,germany,france,unitedStates,japan));
 
         //new markets
         List<Market> allMarkets = new ArrayList<>();
