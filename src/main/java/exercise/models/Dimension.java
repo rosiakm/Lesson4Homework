@@ -1,8 +1,5 @@
 package exercise.models;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Dimension {
     private int high;
     private int width;
