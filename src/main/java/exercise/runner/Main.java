@@ -9,6 +9,6 @@ public class Main {
         Car car = new Car();
 
         dataFactory.createListOfCars();
-        car.printMarketCountries();
+        car.printMarketCountries("BMW",true,300);
     }
 }

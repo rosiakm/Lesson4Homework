@@ -24,20 +24,21 @@ public class Car {
         this.dimension = dimension;
     }
 
-    public void printMarketCountries() {
+    public void printMarketCountries(String model, boolean isAutomaticGear, int tankCapacity) {
+        this.isAutomaticGear = isAutomaticGear;
+
         DataFactory dataFactory = new DataFactory();
         for (Car myCar : dataFactory.createListOfCars()) {
-            if (myCar.producer.getModel().equals("BMW") && myCar.isAutomaticGear && myCar.dimension.getTankCapacity() > 300) {
+            if (myCar.producer.getModel().equals(model) && myCar.isAutomaticGear && myCar.dimension.getTankCapacity() > tankCapacity) {
                 for (int i = 0; i < 3; i++) {
                     Country marketCountry = myCar.market.getCountries().get(i);
-                    System.out.println("Country from the market: " + myCar.market.getName());
                     myCar.market.printCountry(marketCountry);
                 }
             }
         }
     }
 
-    public static String returnSegment() {
+    public String returnSegment() {
         List<String> segmentTypes = new ArrayList<>(asList("standard", "medium", "premium"));
         Random random = new Random();
         return segmentTypes.get(random.nextInt(segmentTypes.size()));
